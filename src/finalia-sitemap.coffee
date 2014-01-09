@@ -18,7 +18,7 @@ module.exports = (grunt) ->
 	# 	TASKS
 	# ==========================================================================
 
-	grunt.registerTask 'finalia-sitemapindex', ->		
+	grunt.registerTask 'finalia-sitemap', ->		
 
         # last modified
 		lastModified = new Date().toISOString()

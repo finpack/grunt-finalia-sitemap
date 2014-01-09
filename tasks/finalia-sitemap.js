@@ -5,7 +5,7 @@
     path = require('path');
     fs = require('fs');
     _ = require('lodash');
-    return grunt.registerTask('finalia-sitemapindex', function() {
+    return grunt.registerTask('finalia-sitemap', function() {
       var lastModified, sitemapPath, xmlStr;
       lastModified = new Date().toISOString();
       xmlStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n   <sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n   <sitemap>\n      <loc>http://www.finalia.pl/sitemap-home.xml</loc>\n      <lastmod>" + lastModified + "</lastmod>\n   </sitemap>\n   <sitemap>\n      <loc>http://www.finalia.pl/blog/sitemap.xml</loc>\n      <lastmod>" + lastModified + "</lastmod>\n   </sitemap>\n</sitemapindex>\n";
