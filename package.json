@@ -1,28 +1,28 @@
 {
-  "name": "grunt-sitemap",
-  "description": "Grunt sitemap generator plugin",
-  "version": "1.1.0",
-  "homepage": "https://github.com/RayViljoen/grunt-sitemap",
+  "name": "grunt-finalia-sitemapindex",
+  "description": "Grunt sitemapindex generator plugin for finalia.pl",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mgibowski/grunt-finalia-sitemapindex",
   "author": {
-    "name": "Ray Viljoen",
-    "email": "rayviljoen@me.com",
-    "url": "rayviljoen.github.com"
+    "name": "Michał Gibowski",
+    "email": "gibowski@gmail.com",
+    "url": "mgibowski.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RayViljoen/grunt-sitemap.git"
+    "url": "git://github.com/mgibowski/grunt-finalia-sitemapindex.git"
   },
   "bugs": {
-    "url": "https://github.com/RayViljoen/grunt-sitemap/issues"
+    "url": "https://github.com/mgibowski/grunt-finalia-sitemapindex/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/RayViljoen/grunt-sitemap/blob/master/LICENSE-MIT"
+      "url": "https://github.com/mgibowski/grunt-finalia-sitemapindex/blob/master/LICENSE-MIT"
     }
   ],
   "main": "grunt.js",
-  "bin": "bin/grunt-sitemap",
+  "bin": "bin/grunt-finalia-sitemapindex",
   "engines": {
     "node": "*"
   },
