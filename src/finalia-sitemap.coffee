@@ -1,6 +1,6 @@
 
-# grunt-finalia-sitemapindex
-# https://github.com/mgibowski/grunt-finalia-sitemapindex
+# grunt-finalia-sitemap
+# https://github.com/finpack/grunt-finalia-sitemap
 # Copyright (c) 2014 Michał Gibowski
 # Licensed under the MIT license.
 
@@ -24,10 +24,10 @@ module.exports = (grunt) ->
 		lastModified = new Date().toISOString()
 
 		# -----------------------
-		# 		Build xml
+		# 		Build sitemap index xml
 		# -----------------------
 		
-		xmlStr = """
+		sitemapIndexXmlStr = """
 <?xml version="1.0" encoding="UTF-8"?>
    <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <sitemap>
@@ -42,11 +42,34 @@ module.exports = (grunt) ->
 
 """
 
-		# Write sitemap to root
-		sitemapPath = './dist/sitemap.xml'
-		grunt.file.write sitemapPath, xmlStr
+		# Write sitemap index to dist
+		sitemapIndexPath = './dist/sitemap.xml'
+		grunt.file.write sitemapIndexPath, sitemapIndexXmlStr
+		
+		grunt.log.writeln 'Sitemap index created successfully'
+		
+		
+		# -----------------------
+		# 		Build sitemap xml
+		# -----------------------		
+		
+		sitemapXmlStr = """
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://www.finalia.pl/</loc>
+	<lastmod>#{lastModified}</lastmod>
+	<changefreq>daily</changefreq>
+	<priority>1.0</priority>
+  </url>
+</urlset>
 
-		grunt.log.writeln 'Sitemap created successfully'
+"""
+
+		# Write sitemap index to dist
+		sitemapPath = './dist/sitemap-home.xml'
+		grunt.file.write sitemapPath, sitemapXmlStr
+		grunt.log.writeln 'Sitemap created successfully'		
+
 		grunt.log.writeln 'OK'
 
 		# Return true / false
